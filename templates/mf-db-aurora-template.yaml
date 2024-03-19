@@ -180,13 +180,13 @@ Resources:
             - ERDSStorageEncryptionEnabled: "Encryption disabled by design"
     Properties:
       Engine: aurora-postgresql
-      EngineVersion: "10"
+      EngineVersion: "14.5"
       MasterUsername: !Ref DBMasterUsername
       MasterUserPassword: !Ref DBMasterUserPassword
       DBSubnetGroupName: !Ref DatabaseSubnetGroup
       StorageEncrypted: false
       DatabaseName: mydb
-      DBClusterParameterGroupName: default.aurora-postgresql10
+      DBClusterParameterGroupName: default.aurora-postgresql14
       Port:  5432
       VpcSecurityGroupIds:
         - !Ref ESDatabaseSG
